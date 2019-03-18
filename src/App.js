@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import Header from './components/Header.jsx'
-import Navbar from './components/Navbar'
-import Content from './components/Profile'
+import Header from './components/Header/Header.jsx'
+import Navbar from './components/Navbar/Navbar'
+import Content from './components/Profile/Profile'
 import './App.css';
 
 const App=()=>{
