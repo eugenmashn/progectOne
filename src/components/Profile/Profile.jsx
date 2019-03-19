@@ -3,7 +3,7 @@ import s from './Profile.module.css';
 import MyPost from './MyPost/MyPost'
 const Profile=()=>{
     return(
-        <div className={s.content}>
+        <div >
             <div>
                 <img src='https://www.gettyimages.ie/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg'/>
             </div>
