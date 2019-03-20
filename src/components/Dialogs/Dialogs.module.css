@@ -5,6 +5,7 @@
 
 .dialogsItems {
     padding: 10px;
+    color:white;
 }
 .dialogsItems .active{
     color :gold;
@@ -13,6 +14,6 @@
     padding: 10px;
 }
 
-.messeges.dialog {
-
+.messeges.message {
+    color: white;
 }
