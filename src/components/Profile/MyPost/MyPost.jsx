@@ -5,7 +5,8 @@ const MyPosts=()=>{
     return(
 
         <div>My post
-            <div>
+            <div className={s.postsBlock}>
+                <h3>My posts</h3>
                 <textarea></textarea>
                 <button>Add post</button>
             </div>

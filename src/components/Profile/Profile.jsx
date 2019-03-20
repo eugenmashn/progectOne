@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
 import s from './Profile.module.css';
-import MyPost from './MyPost/MyPost'
+
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
+import MyPosts from "./MyPost/MyPost";
 const Profile=()=>{
     return(
         <div >
-            <div>
-                <img src='https://www.gettyimages.ie/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg'/>
-            </div>
+            <ProfileInfo />
+            <MyPosts/>
 
-            <div>
-                ava+discriphion
-            </div>
-            <MyPost/>
         </div>
     )
 };
