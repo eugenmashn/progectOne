@@ -8,6 +8,7 @@ const MyPosts=(props)=>{
    let addPost=()=> {
        let text=newPostElement.current.value;
      props.addPost(text);
+     newPostElement.current.value='';
    };
     return(
 
@@ -23,6 +24,6 @@ const MyPosts=(props)=>{
             </div>
         </div>
     )
-    ok
+
 };
 export default MyPosts;
