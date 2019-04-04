@@ -12,7 +12,7 @@ let state={
 
 
     ],
-
+        newPostText:'Eugen Krasava',
 
 }
 
@@ -51,14 +51,20 @@ let state={
 
 
 };
-export let addPost= (postMessage) =>{
+export let updateNewPostText=(newText)=>{
+    state.profilePage.newPostText=newText;
+    rerenderEntireTree(state);
+
+};
+export let addPost= () =>{
 
     let newPost={
       id:5,
-      message:postMessage,
+      message:state.profilePage.newPostText,
       countLike:5
     };
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText='';
     rerenderEntireTree(state);
 };
 
