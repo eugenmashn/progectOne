@@ -9,7 +9,10 @@ const Dialogs=(props)=>{
     let newSend=React.createRef();
     let newMesseg=()=>{
         let text=newSend.current.value;
-        props.newMessege(text);
+        props.dispatch({
+            type:'NEW-MESSEGE',
+            newText:text,
+        });
 
     };
     return( <div className={s.dialogs}>
