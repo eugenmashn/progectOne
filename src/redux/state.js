@@ -1,3 +1,5 @@
+const ADD_Post = 'ADD-POST';
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 let store={
     _state:{
         profilePage:{ posts:[
@@ -109,6 +111,21 @@ let store={
         }
     }
 
+};
+export const addPostActionCreator=()=>{
+
+
+    return {
+        type: ADD_Post
+    }
+
+};
+export const updateNewPostTextActionCreator=(text)=>{
+
+    return {
+        type: UPDATE_NEW_POST_TEXT,
+        newText:text,
+    }
 };
 
 
