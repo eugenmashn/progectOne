@@ -1,5 +1,7 @@
 const ADD_Post = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const UPDATE_NEW_MESSAGE_BODY='UPDATE_NEW_MESSAGE_BODY'
+const SEND_MESSAGE="SEND_MESSAGE";
 let store={
     _state:{
         profilePage:{ posts:[
@@ -43,6 +45,7 @@ let store={
 
             ]
             ,
+            newMessageBody:'',
 
         },
         sidebar:{
@@ -109,6 +112,17 @@ let store={
             this._state.dialogsPage.message.push(messeg);
             this._callSubscriber(this._state);
         }
+        else if(action.type==UPDATE_NEW_MESSAGE_BODY){
+            this._state.dialogsPage.newMessageBody=action.body;
+            this._callSubscriber(this._state);
+
+        }
+        else if(action.type==SEND_MESSAGE){
+            let body=this._state.dialogsPage.newMessageBody;
+            this._state.dialogsPage.newMessageBody='';
+            this._state.dialogsPage.message.push({id:6,message:body});
+            this._callSubscriber(this._state);
+        }
     }
 
 };
@@ -125,6 +139,22 @@ export const updateNewPostTextActionCreator=(text)=>{
     return {
         type: UPDATE_NEW_POST_TEXT,
         newText:text,
+    }
+};
+
+export const sendMessageCreator=()=>{
+
+
+    return {
+        type: SEND_MESSAGE
+    }
+
+};
+export const updateNewMessageBodyCreator=(text)=>{
+
+    return {
+        type: UPDATE_NEW_MESSAGE_BODY,
+        body:text,
     }
 };
 
