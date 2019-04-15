@@ -32,14 +32,18 @@ let initialState={ message:[
 
      switch (action.type) {
          case UPDATE_NEW_MESSAGE_BODY: {
-        state.newMessageBody=action.body;
-            return state}
+             let CopyState={...state};
+
+        CopyState.newMessageBody=action.body;
+            return CopyState}
 
         case SEND_MESSAGE:{
-        let body=state.newMessageBody;
-        state.newMessageBody='';
-       state.message.push({id:6,message:body});
-       return state;
+            let CopyState={...state};
+        let body=CopyState.newMessageBody;
+        CopyState.message=[...state.message];
+        CopyState.newMessageBody='';
+       CopyState.message.push({id:6,message:body});
+       return CopyState;
     }
         default:{return state}
         }
