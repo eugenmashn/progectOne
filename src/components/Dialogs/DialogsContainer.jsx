@@ -14,10 +14,10 @@ let mapStateTOProps=(state)=>{
 };
 let mapDispatchTooProps=(dispatch)=>{
     return {
-        updateNewMessage: () => {
+        sendMessage : () => {
             dispatch(sendMessageCreator());
         },
-    sendMessage:(body)=>{
+        updateNewMessage:(body)=>{
         dispatch(updateNewMessageBodyCreator(body))
         }
     }
