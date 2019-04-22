@@ -13,7 +13,7 @@ let mapDispatchToProps=(dispatch)=>{
         follow:(userId)=>{
             dispatch(followsAC(userId))
         },
-        unfollow:(userId)=>{git comm
+        unfollow:(userId)=>{
             dispatch(unfollowsAC(userId))
         },
         setUsers:(user)=>{
